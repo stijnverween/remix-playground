@@ -1,33 +1,18 @@
 import { ActionFunctionArgs, json } from "@remix-run/node";
-import { useFetcher } from "@remix-run/react";
-
-type ButtonState = "default" | "active";
 
 import "./styles.css";
+import { ComplextComponent } from "./components/ComplexComponent";
+import { ButtonState } from "./types";
+import { OverviewComponent } from "./components/OverviewComponent";
 
 export default function Component() {
-  const fetcher = useFetcher<typeof action>();
-  const buttonState = fetcher.data?.buttonState ?? "default";
-
   return (
     <main>
       <h1>Demo</h1>
       <p>This is a demo page.</p>
-
       <h2>Current states</h2>
-      <ul>
-        <li>Button - {buttonState}</li>
-      </ul>
-
-      <fetcher.Form method="POST">
-        <button
-          className={`button ${buttonState}`}
-          name="buttonState"
-          value={buttonState}
-        >
-          Update State
-        </button>
-      </fetcher.Form>
+      <OverviewComponent />
+      <ComplextComponent />
     </main>
   );
 }
