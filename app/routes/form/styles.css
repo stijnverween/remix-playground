@@ -1,0 +1,16 @@
+/* Using CSS nesting just because I wanted to play with it, not sure if this is a good way to write it 🤷‍♂️ */
+.button {
+  padding: 8px 16px;
+  &.default {
+    &:hover {
+      background-color: lightgray;
+    }
+    background-color: white;
+  }
+  &.active {
+    &:hover {
+      background-color: lightcoral;
+    }
+    background-color: hotpink;
+  }
+}

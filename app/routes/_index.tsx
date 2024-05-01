@@ -14,7 +14,10 @@ export default function Index() {
       <h1>Welcome to Remix</h1>
       <ul>
         <li>
-          <Link to="/demo">Update state with a button and form submit</Link>
+          <Link to="/form">Update state with a button and form submit</Link>
+        </li>
+        <li>
+          <Link to="/context">Update state with a button and useContext</Link>
         </li>
       </ul>
     </div>
